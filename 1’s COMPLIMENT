@@ -1,0 +1,6 @@
+Mnemonics     	Explanation
+LDA 8000      	Load the contents of memory address 8000 into accumulator A
+CMA           	Complement the contents of accumulator A (i.e., flip all bits)
+STA 8001	      Store the complemented value into memory address 8001
+HLT	            Halt the program execution
+ 
