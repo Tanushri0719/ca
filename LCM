@@ -1,0 +1,26 @@
+ MNEMONICS 	          EXPLANATION 
+LXI H,8000          	Load H and L register with addresss 8000
+MOV C,M	              Mov the content of memory at HL to register C
+MVI B,00	            Mov immediately value 00 into the B register
+INX H	              Increment HL
+MOV B,M            	Mov the content of memory at HL to register B
+CMA	                  Complement accumulator
+MOV E,A	                Mov the content of register A to register E
+MVI D,00H            	Mov immediately the value 00 into the register D
+MOV A,B              	Mov the content of register B to register A
+CMA	                Complement accumulator
+MOV D,A              	Mov the content of register A to register D
+INX D              	Increment the register pair DE 
+LXI H,0000	          Load H and L register with address 0000
+NEXT: DAD B	          Next double add the content of register pair to HL pair
+SHLD 8010              	Store HL direct into the memory location 8010 and 8011
+LOOP: DAD D          	double add 
+JNC SKIP	            Jump to skip if the carry flag set [A<B]
+MOV A,H	Mov             the content of register H to register to A
+ORA L                	OR operation between the accumulator and L register
+JZ EXIT	               If the result is zero then jump to the exit
+JMP LOOP	            Jump to loop if the zero flag is not set
+SKIP: LHLD 8010	      Load from the memory location of 8010 into HL register pair
+JMP NEXT	            Jump unconditionally to the next label
+EXIT: LHLD 8010	        Load the Hl pair stored at the memory location 8010
+HLT                    	Halt the process 
