@@ -1,0 +1,14 @@
+MNEMONICS	      Explanation
+LDA 8500       	loads the accumulator (A) with the contents of memory location 8501H.
+MOV B,A        	moves the contents of register A into register B.
+LDA 8501	      loads the accumulator (A) with the contents of memory location 8500H.
+MVI C,00	      loads the immediate value 00H into register C.
+LOOP: CMP B	    the beginning of a loop, compares the contents of register A (accumulator) with register B.
+JC DONE	        Jumps to the LOOP1 label if the carry flag is set (i.e., if A is less than B after the comparison).
+SUB B	          Subtracts the contents of register B from the accumulator (A) and stores the result in A.
+INR C	          Increments register C by 1.
+JMP LOOP 	      Jumps back to the LOOP label, effectively continuing the loop.
+DONE: STA 8503	Stores the contents of the accumulator (A) into memory location 8503H.
+MOV A,C	        Moves the contents of register C into the accumulator (A).
+STA 8502	      Marks the continuation point of the program after the jump, Stores the contents of the accumulator (A) into memory location 8502H.
+HLT	            a software interrupt and jumps to address 0024H (based on the 8085 architecture).
