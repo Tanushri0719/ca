@@ -1,0 +1,6 @@
+MNEMONICS	            EXPLANATION
+MOV AX,[1100H]      	Move the accumulator(A) to [1100]
+MOV BX,[1102H]	      Move the base(b) to [1102]
+SUB AX,BX	            Subtract accumulator(A) and base (B)
+MOV [1200H],AX	      Move [1200] to accumulator (A)
+HLT	                  Halt the program
