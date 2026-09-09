@@ -1,0 +1,10 @@
+ MNEMONICS 	          EXPLANATION 
+MVI A, 03H	          Load the accumulator with the content of memory Location 8050H
+ANI 01H	              Logical and operation with accumulator and immediate value 01
+JZ EVEN               Jump to loop1 if the result of the AND operation is zero
+MVI B, 01H           	Move immediate value 11 into the accumulator (odd number) 
+JMP STORE	            Jump to loop2 
+EVEN: MVI B, 00H	    Move immediate value 22 into the accumulator (even number) 
+STORE: MOV A, B	      Store the accumulator content at memory location 8051
+STA 3000	            STORE DATA OF AACCUMULATOR 
+HLT                    Halt the process 
