@@ -1,0 +1,13 @@
+MNEMONICS	     EXPLANATION
+LDA 2200	     Load the accumulator with the first number in the address 8500
+MOV E,A	      Move the data from accumulator to ‘E’ register
+MVI D,00	    Move the immediate value 00 into 
+LDA 2201    	Load the accumulator number in the address 2201
+MOV C,A      	Move the data from accumulator to ‘C’ register
+LXI H,0000	  Load the immediate value 0000 into the  HL register pair 
+BACK: DAD D	  Back : Label for the loop
+D ADD:        Add the value in register D
+DCR C	        Decrement register E by 1
+JNZ BACK    	In register E, is not 0,jump back to the beginning of the loop
+SHLD 2202	    Store the value on the HL register pair at memory address 2202
+HLT	          HALT
