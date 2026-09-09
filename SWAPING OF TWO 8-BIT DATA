@@ -1,0 +1,8 @@
+LDA 1100     ; Load the contents of memory address 1100 into accumulator A
+MOV B, A    ; Move the contents of accumulator A into register B
+LDA 1101     ; Load the contents of memory address 1101 into accumulator A
+MOV C, A    ; Move the contents of accumulator A into register C
+STA 1102      ; Store the contents of accumulator A into memory address 1102
+MOV A, B    ; Move the contents of register B into accumulator A
+STA 1103      ; Store the contents of accumulator A into memory address 1103
+HLT               ; Halt the program execution
