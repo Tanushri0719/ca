@@ -1,0 +1,7 @@
+MNEMONICS	            EXPLANATION
+MOV AX,[1100H]      	Move the accumulator (A) to [1100]
+MOV BX,[1102H]	      Move the base (B) to [1102]
+DIV BX	              Divide by base (B)
+MOV [1200H], AX	      Move [1200] to accumulator (A)
+MOV [1202H], DX	      Move [1202] to direction (D)
+HLT	                  Halt the program
