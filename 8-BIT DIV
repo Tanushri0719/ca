@@ -1,0 +1,16 @@
+MNEMONICS	      EXPLANATION
+START: NOP    	It is often used for code alignment
+LDA 8500	      Load the accumulator with first number in address 8500
+MOV B, A       	Move data from accumulator to ‘B’ register 
+LDA 8501	      Load the accumulator with second number in the address 8501
+MVI C,00H      	Move the immediate value 00 into register ‘C’
+LOOP: CMP B 	  Loop : Label for loop CMP B:Compare the value in accumulator (A) with (B)
+JC DONE	        If the carrying is (A<B) jump to label loop 1
+SUB B 	        Subtract the value in register (B) from the accumulator (A) 
+INR C         	Increment register C by 1
+JMP LOOP       	Jump back to the beginning of the loop
+DONE: STA 8502	 Store the data in accumulator 8502
+MOV A, C         	Move the data from `C’ register to accumulator
+STA 8503        	Store the data in the accumulator in 8503
+RST 1 	        Typically transfer control to a predefined interrup service routine
+HLT	            HALT
