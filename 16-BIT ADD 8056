@@ -1,0 +1,6 @@
+MNEMONICS          EXPLANATION
+MOVAX,[1100H]	      Loads the 16-Bit value from memory address in to AX register.
+MOVBX,[1102H]	      Loads the 16-Bit value from memory address in to the BX register.
+ADDAX,BX	          Adds the value in BX to AX and stores in AX.
+MOV[1200H],AX	      Moves the 16-Bit value in the AX register into memory address.
+HLT               	Halts the program execution.
