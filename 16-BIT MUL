@@ -1,0 +1,19 @@
+MNEMONICS	        Explanation
+LHLD 2050 	      Loads the contents of memory location 2050H and 2051H into the HL register pair.
+SPHL	            Sets the Stack Pointer (SP) to the value in the HL register pair.
+LHLD 2052	        Loads the contents of memory location 2052H and 2053H into the HL register pair.
+XCHG	            Exchanges the contents of the HL and DE register pairs.
+LXI H,0000H      	Loads the value 0000H into the HL register pair.
+LXI B,0000H	      Loads the value 0000H into the BC register pair.
+AGAIN: DAD SP	    Marks the beginning of a loop, Adds the contents of the SP register pair to the HL register pair.
+JNC START	        Jumps to the START label if the carry flag is not set (i.e., no overflow occurred in the previous operation).
+INX B	            Increments the BC register pair by 1.
+START: DCX D	    Marks the start of another loop, Decrements the DE register pair by 1.
+MOV A,E	          Moves the contents of register E into register A.
+ORA D	            Performs a logical OR operation between A and D.
+JNZ AGAIN	        Jumps back to the AGAIN label if the Zero flag is not set (i.e., if the result of the OR operation is non-zero).
+SHLD 2054	        Stores the contents of the HL register pair into memory locations 2054H and 2055H.
+MOV L,C	          Moves the contents of register C into register L.
+MOV H,B          	Moves the contents of register B into register H.
+SHLD 2055        	Stores the contents of the HL register pair into memory locations 2055H and 2056H.
+HLT	              Halts the program.
