@@ -1,0 +1,10 @@
+MNEMONICS	    EXPLANATION
+LDA 2050	    Load the content of the memory location 2050H into the accumulator (A).
+MOV B,A	      Move the content of the accumulator (A) into register B. At this point, B contains the value from 2050H.
+LDA 2051	    Load the content of the memory location 2051H into the accumulator (A).
+CMP B        	Compare the content of register B with the accumulator (A).
+JNC STORE	    Jump to the label STORE if there is no carry, which means A >= B.
+MOV A,B      	If there is a carry (i.e., A < B), move the content of B (the smaller value) into the accumulator.
+STORE: STA 2052	    Store the content of the accumulator (A) into the memory location 2052H.
+HLT	          Halt the execution of the program.
+
