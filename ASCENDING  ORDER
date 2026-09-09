@@ -1,0 +1,20 @@
+ MNEMONICS 	           EXPLANATION 
+LXI H,8000	         Load H and L register with addresss 8000
+MOV C,M              Mov the content of memory at HL to register C
+DCR  C             	Decrement the value in register C
+LOOP3: MOV D,C	     Loop3  mov the content of register c to D
+LXI H,8001	        Load Hand L register with address 8001
+LOOP2: MOV A,M	    Loop2 mov the content of memory at HL to register A
+INX H	              Increment HL
+CMP   M              Compare the memory
+JC LOOP1	          Jump if carry in loop1
+MOV B,M            	Mov the content from memory at HL to register B
+MOV M,A	            Mov the content of register A to memory at HL
+DCX H              	Decrement the content HL
+MOV M,B            	Mov the content of register B to memory at HL
+INX H	              Increment HL
+LOOP1: DCR  D	       Loop1 decrease the value in register D
+JNZ   LOOP2          Jump to loop2 if the zero flag is not set
+DCR  C	            Decrease the value of register C
+JNZ  LOOP3	        Jump to loop3 if the zero flag is not set
+HLT                 	Halt the process 
