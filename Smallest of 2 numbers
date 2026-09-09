@@ -1,0 +1,10 @@
+MNEMONICS	      EXPLANATION
+LXI H,8000	    Load the HL register pair with the address 8000H.
+MOV B,M	        Move the content of the memory location pointed by the HL pair (M) into register B.
+INX H	          Increment the HL register pair to point to the next memory location (8001H).
+MOV A,M	        Move the content of the memory location pointed by the updated HL pair (8001H) into the accumulator (A).
+CMP B          	Compare the contents of register B with the accumulator (A).
+JC STORE	      Jump to the label STORE if the carry flag is set (A < B).
+MOV A,B	        If the carry flag is not set (A >= B), load the content of register B into the accumulator.
+STORE: STA 8010	    Store the content of the accumulator (A) into the memory location 8010H.
+HLT	            Halt the execution of the program.
