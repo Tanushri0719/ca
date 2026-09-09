@@ -1,0 +1,7 @@
+MNEMONICS	 EXPLANATION
+LDA 8000  	Load accumulator with the first number in the address 
+MOV B, A 	 Move the data from accumulator to B register 
+LDA 8001 	 Load accumulator with the second number in the address
+SUB B 	  Subtract the data B register with accumulator 
+STA 8002 	Store the data (Output) of the accumulator in the address
+RST 1    	HALT
