@@ -1,0 +1,10 @@
+ MNEMONICS 	          EXPLANATION 
+MVI A, 0FFH	          moves the value 9A (in hexadecimal) into register A.
+ANI 80H	              performs a bitwise AND operation between the accumulator (A) and 80H
+JZ POSITIVE	          instruction checks the Zero flag.
+MVI B, 01H	          the jump to NEG was not taken, this instruction moves the immediate value 22H (34 in decimal) into register A.
+JMP STORE	            instruction causes an unconditional jump to the label ST0.
+POSITIVE: MVI B, 00H	        The jump to NEG had been taken (if ANI resulted in zero), this instruction would have moved 11H (17 in decimal) into register A.
+STORE: MOV A, B	       Store the accumulator content at memory location 8051
+STA 3000	              STORE DATA OF AACCUMULATOR 
+HLT	                    Halt the process 
