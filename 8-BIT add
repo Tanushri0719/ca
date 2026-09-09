@@ -1,0 +1,7 @@
+MNEMONICS	EXPLANATION
+LDA 8050	Load accumulator with first number in the address 8085
+MOV B, A 	Move the data from accumulator to’B’ register
+LDA 8051	Load accumulator with second number in the address 8051
+ADD B 	  Add the data of ‘B’ register with accumulator
+STA 8052	Store the data (Output) of the accumulator in address 8052
+HLT	Halt
