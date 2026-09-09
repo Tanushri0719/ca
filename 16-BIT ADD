@@ -1,0 +1,12 @@
+MNEMONICS	      Explanation
+LDA 3050 	       Load the content of the memory location 3050H into the accumulator (A).  
+MOV B,A	        Move the content of the accumulator (A) into register B. Now, register B contains the value from 3050H.
+LDA 3051	      Load the content of the memory location 3051H into the accumulator (A).
+ADD B	          Add the content of register B (value from 3050H) to the accumulator (A).
+STA 3052	      Store the result of the addition (from the accumulator) into memory location 3052.
+LDA 3053	      Load the content of the memory location 3053H into the accumulator (A).
+MOV B,A	        Move the content of the accumulator (A) into register B.
+LDA 3054	      Load the content of the memory location 3054H into the accumulator (A).
+ADC B          	Add the content of register B to the accumulator (A)
+STA 3055      	Store the result of the addition into memory location 3055.
+HLT            	Halt the execution of the program.
