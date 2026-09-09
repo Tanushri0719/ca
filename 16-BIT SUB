@@ -1,0 +1,12 @@
+MNEMONICS	      Explanation
+LHLD 2050	      Load the 16-bit data from memory locations 2050H and 2051H into the HL register pair.
+XCHG	          Exchange the contents of the HL and DE register pairs.
+LHLD 2052	      Load the 16-bit data from memory locations 2052H and 2053H into the HL register pair.
+MVI C,00	      Move the immediate value 00H into register C.
+MOV A, E	      Move the content of register E into the accumulator (A).
+SUB L	          Subtract the content of register L from the accumulator (A).
+STA 2054	      Store the result of the subtraction into memory location 2054H.
+MOV A, D	      Move the content of register D into the accumulator (A).
+SUB H	          Subtract the content of register H from the accumulator (A).
+STA 2055	      Store the result of the subtraction into memory location 2055H.
+HLT	            Halt the execution of the program.
