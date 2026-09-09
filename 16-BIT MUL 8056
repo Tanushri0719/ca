@@ -1,0 +1,7 @@
+MNEMONICS 	          EXPLAINATION 
+MOV AX, [1100 H]	    Move the accumulation [A] to [1100]
+MOV BX, [1102H]     	Move the base [B] to [1102]
+MUL BX              	Multiply base [B]
+MOV [1200H], AX 	    move [1200]to accumulator [A]
+MOV [1202H], DX      	move the [1202] to direction [D]
+HLT 	                Halt the program 
