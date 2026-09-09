@@ -1,0 +1,16 @@
+MNEMONICS	              EXPLANATION
+LXI H,6000	            Load H and L register with address 6000
+MOV A,M	                Move the content of memory at HL to register A
+INX H                  	Increment of HL
+MOV B,M                	Move the content of memory at HL to register B
+LOOP: CMP B	            CMP B compares the contents of register A (accumulator) with register B.
+JZ STORE              	If A equals B, it means we have found the GCD, and the program jumps to STORE to save the result.
+JC EXG	                If A is smaller than B (carry is set), the program jumps to EXG, where the values of A and B are exchanged.
+SUB B	                  Subtracts B from A, and the loop repeats the process.
+JMP LOOP	              Jump back to the LOOP label and repeat the process.
+EXG: MOV C,B           	The value of B is saved into C.
+MOV B,A	                The value of A is then moved into B.
+MOV A,C	                Finally, the value of C (which holds the original value of B) is moved into A.
+JMP LOOP              	Jump back to the LOOP label and repeat the process
+STORE: STA 6009	        Store the data (output) of the accumulator in address 6009
+HLT	                    Halt 
